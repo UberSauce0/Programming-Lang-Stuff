@@ -44,5 +44,3 @@ ifDown (yards >= 10){
 ifDown (yards >= 100){
   touchdown;
 }
-
-
