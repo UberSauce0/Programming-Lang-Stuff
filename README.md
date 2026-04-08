@@ -16,6 +16,7 @@ The Language is designed to simulate football logic while demonstrating programm
 
 ## Example for Code Snippet
 ```Football
+//Game Starts
 team Lions;
 score = 4;
 down = 3;
@@ -26,6 +27,7 @@ play runPlay(rb){
   yards = yards + 5;
 }
 
+//Drive Loop
 drive(down <= 4){
   runPlay(rb);
 
@@ -37,6 +39,8 @@ ifDown (yards >= 10){
   down = down + 1;
   }
 }
+
+//Checking if Touchdown
 ifDown (yards >= 100){
   touchdown;
 }
