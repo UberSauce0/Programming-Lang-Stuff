@@ -3,9 +3,11 @@
 1. Ryan Zetterberg
 2. Joseph Kang
 --------------------- 
+
+## Name of the Language
 Name: Football Script
 
-## Language Theme Image
+## Image/Picture 
 <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/0e57de8d-ecfa-4fb2-aa74-089dbe2f2b67" />
 
 ## Overview
@@ -14,7 +16,7 @@ It replaces traditional programming concepts with football terminology such as p
 
 The Language is designed to simulate football logic while demonstrating programming fundamentals such as variables, loops, and conditionals.
 
-## Example for Code Snippet
+## Example Code Snippet
 ```Football
 //Game Starts
 team Lions;
@@ -44,3 +46,7 @@ ifDown (yards >= 10){
 ifDown (yards >= 100){
   touchdown;
 }
+
+## Full Syntax Table
+
+## Grammer Statements
