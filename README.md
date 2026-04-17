@@ -51,8 +51,13 @@ ifDown (yards >= 100){
 ## Full Syntax Table
 
 | Element | Example | Description |
-| | | |
-
+| Variable| score = 4; | Value Storage|
+|Integer| yards = 6;| Numbers
+|String||
+|Boolean||
+|Block||
+|Condition||
+|End Statement||
 
 ## Grammer Statements
 
