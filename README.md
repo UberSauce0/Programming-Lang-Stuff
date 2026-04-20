@@ -67,5 +67,11 @@ ifDown (yards >= 100){
 | Conditional | ifDown | If Statement |
 | Else | elsePlay | Else block |
 | Object | roster | Player/team |
-## Grammer Statements
+
+## Grammar Statements
+
+program = { statement } ;
+statement = variable | play | drive | conditional ;
+variable = identifier "=" value ";" ;
+
 
