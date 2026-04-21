@@ -86,27 +86,28 @@ ifDown (yards >= 100){
 
 \<drive\> = "drive" "(" \<condition\> ")" block ;
 
-\<conditional\> = "ifDown(" \<condition\> ")" block ; 
+\<conditional\> = "ifDown(" \<condition\> ")" block ["elsePlay" block] ; 
 
 \<functionCall\> = identifier "(" \<arguments\> ")"
 
-\<block\>
+\<block\> = "{" { statement } "}" ; 
 
-\<condition\>
+\<condition\> = identifier operator value ;
 
-\<operator\>
+\<operator\> = "==" | "!=" | ">" | "<" | ">=" | "<=" ; 
 
-\<value\>
+\<value\> = number | string | identifier ;
 
-\<identifier\>
+\<parameter\> = identifier { "," identifier} ;
 
-\<\>
+\<arguments\> = value { "," value } ;
 
-\<\>
+\<identifier\> = letter { letter | digit } ;
 
-\<\>
+\<number\> = digit { digit } ;
 
-\<\>
+\<string\> = '"' {character} '"' ; 
+
 
 
 
