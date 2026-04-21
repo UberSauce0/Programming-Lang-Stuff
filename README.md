@@ -52,8 +52,8 @@ ifDown (yards >= 100){
 
 | Element              | Example     | Description            |
 |----------------------|-------------|------------------------|
-| Variable Declaration | score = 4;  | Value Storage          |
-| Integer              | yards = 6;  | Numbers                |
+| Variable Declaration | yards = 6;  | Value Storage          |
+| Integer              | score = 4;  | Numbers                |
 | String               | "Lions"     | Text                   |  
 | Boolean              | win = true; | True/False             |
 | Block                | { }         | Code Block             |
