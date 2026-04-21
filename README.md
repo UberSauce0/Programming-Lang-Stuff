@@ -52,7 +52,7 @@ ifDown (yards >= 100){
 
 | Element              | Example     | Description            |
 |----------------------|-------------|------------------------|
-| Variable Declaration | let score = 4;  | Value Storage      |
+| Variable Declaration | score = 4;  | Value Storage          |
 | Integer              | yards = 6;  | Numbers                |
 | String               | "Lions"     | Text                   |  
 | Boolean              | win = true; | True/False             |
@@ -64,7 +64,7 @@ ifDown (yards >= 100){
 | Subtraction          | -           | Loss of Yards          |
 | Function             | play        | Define play            |
 | Loop                 | drive       | Repeating it           |
-| Conditional          | ifDown      | If Statement           |
+| Conditional          | ifDown, =, !=, >, <, <=, >=      | If Statements such as Operators|
 | Else                 | elsePlay    | Else block             |
 | Object               | roster      | Player/team            |
 
@@ -81,7 +81,7 @@ ifDown (yards >= 100){
   
           
           
-\<variable_declaration\> ::= "let" \<identifier\> "=" \<value\> ";" 
+\<variable_declaration\> ::= "score" "=" \<value\> ";" 
 
 \<play\> ::= "play" \<identifier\> "(" \<parameters\> ")" block 
 
