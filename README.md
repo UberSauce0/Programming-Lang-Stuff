@@ -52,7 +52,7 @@ ifDown (yards >= 100){
 
 | Element              | Example     | Description            |
 |----------------------|-------------|------------------------|
-| Variable Declaration | let score = 4;  | Value Storage          |
+| Variable Declaration | let score = 4;  | Value Storage      |
 | Integer              | yards = 6;  | Numbers                |
 | String               | "Lions"     | Text                   |  
 | Boolean              | win = true; | True/False             |
@@ -81,7 +81,7 @@ ifDown (yards >= 100){
   
           
           
-\<variable_declaration\> ::= "score" \<identifier\> "=" \<value\> ";" 
+\<variable_declaration\> ::= "let" \<identifier\> "=" \<value\> ";" 
 
 \<play\> ::= "play" \<identifier\> "(" \<parameters\> ")" block 
 
@@ -103,7 +103,7 @@ ifDown (yards >= 100){
 
 \<arguments\> ::= \<value\> { "," \<value\> } 
 
-\<identifier\> ::= "runPlay" { \<letter\> | \<digit\> } 
+\<identifier\> ::= "score" { \<letter\> | \<digit\> } 
 
 \<number\> ::= \<digit\> { \<digit\> } 
 
