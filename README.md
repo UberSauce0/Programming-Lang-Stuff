@@ -70,43 +70,43 @@ ifDown (yards >= 100){
 
 ## Grammar Statements
 
-\<program\> = { \<statement\> } ;
+\<program\> ::= { \<statement\> } ;
 
-\<statement\> = \<variable\>
+\<statement\> ::= \<variable\>
           | \<play\> 
           | \<drive\> 
           | \<conditional\>
           | \<functionCall\> ;
           
-\<variable\> = \<identifier\> "=" \<value\> ";" ;
+\<variable\> ::= \<identifier\> "=" \<value\> ";" ;
 
-\<play\> = "play" \<identifier\> "(" \<parameters\> ")" block ;
+\<play\> ::= "play" \<identifier\> "(" \<parameters\> ")" block ;
 
-\<print\> = "passPlay" \<identifier\> "(" \<string\> ")" block ;
+\<print\> ::= "passPlay" \<identifier\> "(" \<string\> ")" block ;
 
-\<drive\> = "drive" "(" \<condition\> ")" block ;
+\<drive\> ::= "drive" "(" \<condition\> ")" block ;
 
-\<conditional\> = "ifDown(" \<condition\> ")" block ["elsePlay" block] ; 
+\<conditional\> ::= "ifDown(" \<condition\> ")" block ["elsePlay" block] ; 
 
-\<functionCall\> = \<identifier\> "(" \<arguments\> ")"
+\<functionCall\> ::= \<identifier\> "(" \<arguments\> ")"
 
-\<block\> = "{" { \<statement\> } "}" ; 
+\<block\> ::= "{" { \<statement\> } "}" ; 
 
-\<condition\> = identifier operator value ; 
+\<condition\> ::= identifier operator value ; 
 
-\<operator\> = "=" | "!=" | ">" | "<" | ">=" | "<=" ; 
+\<operator\> ::= "=" | "!=" | ">" | "<" | ">=" | "<=" ; 
 
-\<value\> = \<number\> | \<string\> | \<identifier\> ;
+\<value\> ::= \<number\> | \<string\> | \<identifier\> ;
 
-\<parameter\> = \<identifier\> { "," \<identifier } ;
+\<parameter\> ::= \<identifier\> { "," \<identifier } ;
 
-\<arguments\> = \<value\> { "," \<value\> } ;
+\<arguments\> ::= \<value\> { "," \<value\> } ;
 
-\<identifier\> = "runPlay" { \<letter\> | \<digit\> } ;
+\<identifier\> ::= "runPlay" { \<letter\> | \<digit\> } ;
 
-\<number\> = \<digit\> { \<digit\> } ;
+\<number\> ::= \<digit\> { \<digit\> } ;
 
-\<string\> = '"' { \<character\> } '"' ; 
+\<string\> ::= '"' { \<character\> } '"' ; 
 
 
 
