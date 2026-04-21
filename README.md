@@ -52,7 +52,7 @@ ifDown (yards >= 100){
 
 | Element              | Example     | Description            |
 |----------------------|-------------|------------------------|
-| Variable Declaration | score = 4;  | Value Storage          |
+| Variable Declaration | let score = 4;  | Value Storage          |
 | Integer              | yards = 6;  | Numbers                |
 | String               | "Lions"     | Text                   |  
 | Boolean              | win = true; | True/False             |
@@ -77,15 +77,7 @@ ifDown (yards >= 100){
           | \<print\>
           | \<drive\> 
           | \<functionCall\> 
-          | \<block\> 
-          | \<condition\>
-          | \<conditional\>
-          | \<value\>
-          | \<parameters\>
-          | \<arguments\>
-          | \<identifier\>
-          | \<number\>
-          | \<string\>
+          
   
           
           
