@@ -50,37 +50,43 @@ ifDown (yards >= 100){
 
 ## Full Syntax Table
 
-| Element | Example | Description |
-|--------|--------|--------|
-| Variable | score = 4; | Value Storage |
-| Integer | yards = 6; | Numbers |
-| String | "Lions" | Text
-| Boolean| win = true; | True/False |
-| Block | { } | Code Block
-| Condition | ( ) | Logic Check
-| End Statement | ; | End of the coding line
-| Pass Action | QB -> WR; | Passing Play |
-| Addition | + | Yards Gain |
-| Subtraction | - | Loss of Yards |
-| Function | play | Define play |
-| Loop | drive | Repeating it |
-| Conditional | ifDown | If Statement |
-| Else | elsePlay | Else block |
-| Object | roster | Player/team |
+| Element       | Example     | Description            |
+|---------------|-------------|------------------------|
+| Variable      | score = 4;  | Value Storage          |
+| Integer       | yards = 6;  | Numbers                |
+| String        | "Lions"     | Text                   |  
+| Boolean       | win = true; | True/False             |
+| Block         | { }         | Code Block             |
+| Condition     | ( )         | Logic Check            | 
+| End Statement | ;           | End of the coding line |
+| Pass Action   | QB -> WR;   | Passing Play           |
+| Addition      | +           | Yards Gain             |
+| Subtraction   | -           | Loss of Yards          |
+| Function      | play        | Define play            |
+| Loop          | drive       | Repeating it           |
+| Conditional   | ifDown      | If Statement           |
+| Else          | elsePlay    | Else block             |
+| Object        | roster      | Player/team            |
 
 ## Grammar Statements
 
-program = { statement } ;
-statement = variable 
+<\program\> = { statement } ;
+
+<\statement\> = variable 
           | play 
           | drive 
           | conditional
           | functionCall ;
-variable = identifier "=" value ";" ;
-play = "play" identifier "(" [parameters] ")" block ;
-drive = "drive" "(" condition ")" block ;
-conditional = "ifDown(" condition ")" block ; 
-functionCall = identifier "(" [arguments] ")"
+          
+<\variable\> = identifier "=" value ";" ;
+
+<\play\> = "play" identifier "(" [parameters] ")" block ;
+
+<\drive\> = "drive" "(" condition ")" block ;
+
+<\conditional\> = "ifDown(" condition ")" block ; 
+
+<\functionCall\> = identifier "(" [arguments] ")"
 
 
 
