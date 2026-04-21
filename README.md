@@ -107,7 +107,7 @@ ifDown (yards >= 100){
 
 \<number\> ::= \<digit\> { \<digit\> } 
 
-\<string\> ::= "" { \<character\> } ""
+\<string\> ::= " { \<character\> } "
 
 
 
