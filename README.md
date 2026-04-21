@@ -50,23 +50,23 @@ ifDown (yards >= 100){
 
 ## Full Syntax Table
 
-| Element       | Example     | Description            |
-|---------------|-------------|------------------------|
-| Variable      | score = 4;  | Value Storage          |
-| Integer       | yards = 6;  | Numbers                |
-| String        | "Lions"     | Text                   |  
-| Boolean       | win = true; | True/False             |
-| Block         | { }         | Code Block             |
-| Condition     | ( )         | Logic Check            | 
-| End Statement | ;           | End of the coding line |
-| Pass Action   | QB -> WR;   | Passing Play           |
-| Addition      | +           | Yards Gain             |
-| Subtraction   | -           | Loss of Yards          |
-| Function      | play        | Define play            |
-| Loop          | drive       | Repeating it           |
-| Conditional   | ifDown      | If Statement           |
-| Else          | elsePlay    | Else block             |
-| Object        | roster      | Player/team            |
+| Element              | Example     | Description            |
+|----------------------|-------------|------------------------|
+| Variable Declaration | score = 4;  | Value Storage          |
+| Integer              | yards = 6;  | Numbers                |
+| String               | "Lions"     | Text                   |  
+| Boolean              | win = true; | True/False             |
+| Block                | { }         | Code Block             |
+| Condition            | ( )         | Logic Check            | 
+| End Statement        | ;           | End of the coding line |
+| Pass Action          | QB -> WR;   | Passing Play           |
+| Addition             | +           | Yards Gain             |
+| Subtraction          | -           | Loss of Yards          |
+| Function             | play        | Define play            |
+| Loop                 | drive       | Repeating it           |
+| Conditional          | ifDown      | If Statement           |
+| Else                 | elsePlay    | Else block             |
+| Object               | roster      | Player/team            |
 
 ## Grammar Statements
 
@@ -89,7 +89,7 @@ ifDown (yards >= 100){
   
           
           
-\<variable_declaration\> ::= "let" \<identifier\> "=" \<value\> ";" 
+\<variable_declaration\> ::= "score" \<identifier\> "=" \<value\> ";" 
 
 \<play\> ::= "play" \<identifier\> "(" \<parameters\> ")" block 
 
