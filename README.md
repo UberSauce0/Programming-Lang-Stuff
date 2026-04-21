@@ -78,7 +78,7 @@ ifDown (yards >= 100){
           | \<conditional\>
           | \<functionCall\> 
           
-\<variable\> ::= \<identifier\> "=" \<value\> ";" 
+\<variable\> ::= "let" \<identifier\> "=" \<value\> ";" 
 
 \<play\> ::= "play" \<identifier\> "(" \<parameters\> ")" block 
 
