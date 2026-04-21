@@ -81,7 +81,7 @@ ifDown (yards >= 100){
   
           
           
-\<variable_declaration\> ::= "score" "=" \<value\> ";" 
+\<variable_declaration\> ::= "yards" "=" \<value\> ";" 
 
 \<play\> ::= "play" \<identifier\> "(" \<parameters\> ")" block 
 
