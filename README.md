@@ -94,7 +94,7 @@ ifDown (yards >= 100){
 
 \<condition\> = identifier operator value ; 
 
-\<operator\> = \<"=="\> | \<"!="\> | \<">"\> | \<"<"\> | \<">="\> | \<"<="\> ; 
+\<operator\> = "==" | "!=" | ">" | "<" | ">=" | "<=" ; 
 
 \<value\> = \<number\> | \<string\> | \<identifier\> ;
 
