@@ -19,7 +19,7 @@ The Language is designed to simulate football logic while demonstrating programm
 ## Example Code Snippet
 ```
 ~ // Game Starts
-team Lions;
+team = ,,Lions,, 
 score = 4;
 down = 3;
 yards = 6;
@@ -54,7 +54,7 @@ ifDown (yards >= 100){
 |----------------------|-------------|------------------------|
 | Variable Declaration | yards = 6;  | Value Storage          |
 | Integer              | score = 4;  | Numbers                |
-| String               | "Lions"     | Text                   |  
+| String               | ,,Lions,,   | Uses double commas     |               
 | Boolean              | win = true; | True/False             |
 | Block                | { }         | Code Block             |
 | Condition            | ( )         | Logic Check            | 
@@ -107,7 +107,7 @@ ifDown (yards >= 100){
 
 \<number\> ::= \<digit\> { \<digit\> } 
 
-\<string\> ::= '"' { \<character\> } '"' 
+\<string\> ::= ",,"{ \<character\> } ",,"
 
 
 
