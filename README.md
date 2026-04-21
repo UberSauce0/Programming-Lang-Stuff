@@ -82,6 +82,8 @@ ifDown (yards >= 100){
 
 \<play\> = "play" \<identifier "(" \<parameters\> ")" block ;
 
+\<print\> = "passPlay" \<identifier "(" \<string\> ")" block ;
+
 \<drive\> = "drive" "(" \<condition\> ")" block ;
 
 \<conditional\> = "ifDown(" \<condition\> ")" block ; 
