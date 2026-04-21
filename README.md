@@ -70,23 +70,23 @@ ifDown (yards >= 100){
 
 ## Grammar Statements
 
-<\program\> = { statement } ;
+\<program\> = { \<statement\> } ;
 
-<\statement\> = variable 
-          | play 
-          | drive 
-          | conditional
-          | functionCall ;
+\<statement\> = \<variable\>
+          | \<play\> 
+          | \<drive\> 
+          | \<conditional\>
+          | \<functionCall\> ;
           
-<\variable\> = identifier "=" value ";" ;
+\<variable\> = \<identifier\> "=" \<value\> ";" ;
 
-<\play\> = "play" identifier "(" [parameters] ")" block ;
+\<play\> = "play" \<identifier "(" \<parameters\> ")" block ;
 
-<\drive\> = "drive" "(" condition ")" block ;
+\<drive\> = "drive" "(" \<condition\> ")" block ;
 
-<\conditional\> = "ifDown(" condition ")" block ; 
+\<conditional\> = "ifDown(" \<condition\> ")" block ; 
 
-<\functionCall\> = identifier "(" [arguments] ")"
+\<functionCall\> = identifier "(" \<arguments\> ")"
 
 
 
