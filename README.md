@@ -17,7 +17,7 @@ It replaces traditional programming concepts with football terminology such as p
 The Language is designed to simulate football logic while demonstrating programming fundamentals such as variables, loops, and conditionals.
 
 ## Example Code Snippet
-```Football
+```
 ~ //Game Starts
 team Lions;
 score = 4;
@@ -46,7 +46,7 @@ ifDown (yards >= 10){
 ifDown (yards >= 100){
   touchdown;
 }
-Football```
+```
 
 ## Full Syntax Table
 
