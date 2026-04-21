@@ -72,13 +72,24 @@ ifDown (yards >= 100){
 
 \<program\> ::= { \<statement\> } 
 
-\<statement\> ::= \<variable\>
+\<statement\> ::= \<variable_declaration\>
           | \<play\> 
+          | \<print\>
           | \<drive\> 
-          | \<conditional\>
           | \<functionCall\> 
+          | \<block\> 
+          | \<condition\>
+          | \<conditional\>
+          | \<value\>
+          | \<parameters\>
+          | \<arguments\>
+          | \<identifier\>
+          | \<number\>
+          | \<string\>
+  
           
-\<variable\> ::= "let" \<identifier\> "=" \<value\> ";" 
+          
+\<variable_declaration\> ::= "let" \<identifier\> "=" \<value\> ";" 
 
 \<play\> ::= "play" \<identifier\> "(" \<parameters\> ")" block 
 
@@ -86,15 +97,13 @@ ifDown (yards >= 100){
 
 \<drive\> ::= "drive" "(" \<condition\> ")" block 
 
-\<conditional\> ::= "ifDown(" \<condition\> ")" block ["elsePlay" block]
-
 \<functionCall\> ::= \<identifier\> "(" \<arguments\> ")"
 
 \<block\> ::= "{" { \<statement\> } "}" 
 
 \<condition\> ::= \<identifier operator value\> 
 
-\<operator\> ::= "=" | "!=" | ">" | "<" | ">=" | "<=" 
+\<conditional\> ::= "=" | "!=" | ">" | "<" | ">=" | "<=" 
 
 \<value\> ::= \<number\> | \<string\> | \<identifier\>
 
