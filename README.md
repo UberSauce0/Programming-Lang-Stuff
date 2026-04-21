@@ -98,7 +98,7 @@ ifDown (yards >= 100){
 
 \<value\> ::= \<number\> | \<string\> | \<identifier\>
 
-\<parameter\> ::= \<identifier\> { "," \<identifier\> } 
+\<parameters\> ::= \<identifier\> { "," \<identifier\> } 
 
 \<arguments\> ::= \<value\> { "," \<value\> } 
 
