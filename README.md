@@ -71,7 +71,16 @@ ifDown (yards >= 100){
 ## Grammar Statements
 
 program = { statement } ;
-statement = variable | play | drive | conditional ;
+statement = variable 
+          | play 
+          | drive 
+          | conditional
+          | functionCall ;
 variable = identifier "=" value ";" ;
+play = "play" identifier "(" [parameters] ")" block ;
+drive = "drive" "(" condition ")" block ;
+conditional = "ifDown(" condition ")" block ; 
+functionCall = identifier "(" [arguments] ")"
+
 
 
