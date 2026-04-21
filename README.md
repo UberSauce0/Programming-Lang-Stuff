@@ -18,7 +18,7 @@ The Language is designed to simulate football logic while demonstrating programm
 
 ## Example Code Snippet
 ```Football```
-//Game Starts
+~ //Game Starts
 team Lions;
 score = 4;
 down = 3;
@@ -87,6 +87,27 @@ ifDown (yards >= 100){
 \<conditional\> = "ifDown(" \<condition\> ")" block ; 
 
 \<functionCall\> = identifier "(" \<arguments\> ")"
+
+\<block\>
+
+\<condition\>
+
+\<operator\>
+
+\<value\>
+
+\<identifier\>
+
+\<\>
+
+\<\>
+
+\<\>
+
+\<\>
+
+
+
 
 
 
