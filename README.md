@@ -94,7 +94,7 @@ ifDown (yards >= 100){
 
 \<condition\> = identifier operator value ; 
 
-\<operator\> = "==" | "!=" | ">" | "<" | ">=" | "<=" ; 
+\<operator\> = "=" | "!=" | ">" | "<" | ">=" | "<=" ; 
 
 \<value\> = \<number\> | \<string\> | \<identifier\> ;
 
@@ -102,7 +102,7 @@ ifDown (yards >= 100){
 
 \<arguments\> = \<value\> { "," \<value\> } ;
 
-\<identifier\> = \<letter\> { \<letter\> | \<digit\> } ;
+\<identifier\> = "runPlay" { \<letter\> | \<digit\> } ;
 
 \<number\> = \<digit\> { \<digit\> } ;
 
