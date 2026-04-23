@@ -8,7 +8,7 @@
 Name: Football Script
 
 ## Image/Picture 
-<img width="300" height="300" alt="image" src="football_image.png" />
+<img width="300" height="300" alt="image" src="(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/American_football.svg/1200px-American_football.svg.png)" />
 
 ## Overview
 LangCraft Football Script is a custom programming language inspired by American Football.
