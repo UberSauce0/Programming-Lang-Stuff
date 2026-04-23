@@ -1,10 +1,10 @@
 # Programming-Lang-Stuff
 
-## Name of the Language
-Name: Football Script
-
 ## Image/Picture 
 <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/0e57de8d-ecfa-4fb2-aa74-089dbe2f2b67" />
+
+## Name of the Language
+Name: Football Script
 
 ## Overview
 LangCraft Football Script is a custom programming language inspired by American Football.
