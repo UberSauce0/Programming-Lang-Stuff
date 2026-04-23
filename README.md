@@ -1,8 +1,4 @@
 # Programming-Lang-Stuff
-## Group Members 
-1. Ryan Zetterberg
-2. Joseph Kang
---------------------- 
 
 ## Name of the Language
 Name: Football Script
@@ -108,6 +104,11 @@ ifDown (yards >= 100){
 \<number\> ::= \<digit\> { \<digit\> } 
 
 \<string\> ::= " { \<character\> } "
+
+## Group Members 
+1. Ryan Zetterberg
+2. Joseph Kang
+
 
 
 
