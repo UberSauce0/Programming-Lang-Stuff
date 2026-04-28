@@ -1,46 +1,46 @@
 function parse(tokens) {
-  let i = 0;
+    let i = 0;
 
-  function parseStatement() {
-    let token = tokens[i];
+    function parseStatement() {
+        let token = tokens[i];
 
-    if (token.type === "IDENTIFIER"){
-      let name = token.value;
-      i++; // move past identifier
+        if (token.type === "IDENTIFIER") {
+            let name = token.value;
+            i++; //move past identifier 
 
-      if (tokens[i].type !==  "EQUALS"){
-        throw new Error ("Expected =");
-      } 
+            if (tokens[i].type !== "EQUALS") {
+                throw new Error("Expected =");
+            }
 
-      i++; // skip '='
+            i++; // skip '='
 
-      let value = tokens[i].value;
-      i++;
+            let value = tokens[i].value;
+            i++;
 
-      return {
-        type: "Assignment"
-        name,
-        value
-      };
-  }
-  
-  if (token.type === "PRINT") {
-    i++;
-    let value = tokens[i].value;
-    i++;
+            return {
+                type: Assignment,
+                name,
+                value
+            };
+        }
 
-    return {
-      type: "Print",
-      value
-    };
-  }
-}  
+        if (token.type === "PRINT"){
+            i++;
+            let value = tokens[i].value;
+            i++;
 
-const body = [];
-while (i < tokens.length) {
-  body.push(parseStatement());
-}
-return { type: "Program", body };
+            return {
+                type: "Print",
+                value
+            };
+        }
+    }
+
+    const body = [];
+    while (i < tokens.length) {
+        body.push(parseStatement());
+    }
+    return { type: "Program", body };
 }
 
 module.exports = { parse };
