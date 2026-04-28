@@ -3,7 +3,7 @@ const grammar = {
   "KEYWORD(let)",
   "IDENTIFIER",
   "EQUALS",
-  "VALUE",
+  "NUMBER",
   "SEMICOLON",
   ],
   
@@ -41,5 +41,15 @@ const grammar = {
 };
 
 const tokens = [
-  {}
+  {type: "KEYWORD", value: "let"},
+  {type: "IDENTIFIER", value: "x"},
+  {type: "EQUALS", value: "="},
+  {type: "NUMBER", value: "3"},
+  {type: "SEMICOLON", value: ";"},
+
+  {type: "KEYWORD", value: "play"},
+  {type: "LPAREN", value : "("},
+  {type: "IDENTIFIER", value: "x"},
+  {type: "LPAREN", value : ")"},
+  {type: "SEMICOLON", value: ";"},
 ]
