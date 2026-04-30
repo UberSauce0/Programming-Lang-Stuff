@@ -30,14 +30,7 @@ const grammar = {
   "RPAREN",
   "SEMICOLON",
   ],
-  
-  function: [
-  "KEYWORD(passPlay)",
-  "LPAREN",
-  "ARG",
-  "RPAREN",
-  "SEMICOLON",
-  ],
+
 };
 
 const tokens = [
@@ -52,4 +45,27 @@ const tokens = [
   {type: "IDENTIFIER", value: "x"},
   {type: "LPAREN", value : ")"},
   {type: "SEMICOLON", value: ";"},
+
+  {type: "KEYWORD", value: "passPlay"},
+  {type: "LPAREN", value : "("},
+  {type: "STRING", value: ""},
+  {type: "LPAREN", value : ")"},
+  {type: "SEMICOLON", value: ";"},
+
+  {type: "KEYWORD", value: "drive"},
+  {type: "LPAREN", value : "("},
+  {type: "CONDITION", value: "<,>,="},
+  {type: "LPAREN", value : ")"},
+  {type: "SEMICOLON", value: ";"}, 
 ]
+function readProgram() {
+    const program = fs.readFileSync(filename, "utf8");
+    const lines = program.split("\n");
+    let fullProg = "";
+    for (let line of lines) {
+        fullProg += line + "\n";
+    }
+    return fullProg;
+}
+function lexer(fullProgram) {
+}
