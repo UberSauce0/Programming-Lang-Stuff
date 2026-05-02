@@ -1,88 +1,98 @@
 function parse(tokens) {
-    let i = 0;
+  let current = 0;
 
-    function parseExpression() {
-        let left = parseTerm();
-        
-        while (i < tokens.length && tokens[i].type === "PLUS") {
-            let operator = tokens[i];
-            i++;
+  let ast = {
+    type: "Program",
+    body: []
+  };
 
-            let right = parseTerm();
+  while (current < tokens.length) {
+    let token = tokens[current];
 
-            left = {
-                type: "BinaryExpression",
-                operator: operator.type,
-                left,
-                right
-            };
+     if (
+      current + 4 < tokens.length &&
+      tokens[current].type === "KEYWORD" &&
+      tokens[current].value === "let" &&
+      tokens[current + 1].type === "IDENTIFIER" &&
+      tokens[current + 2].type === "EQUALS" &&
+      tokens[current + 3].type === "NUMBER" &&
+      tokens[current + 4].type === "SEMICOLON"
+    ) {
+      ast.body.push({
+        type: "VariableDeclaration",
+        name: tokens[current + 1].value,
+        value: {
+          type: "NumberLiteral",
+          value: tokens[current + 3].value
         }
+      });
 
-        return left;
+      current = current + 5;
+    }
+         
+     else if (
+      current + 4 < tokens.length &&
+      tokens[current].type === "KEYWORD" &&
+      tokens[current].value === "play" &&
+      tokens[current + 1].type === "LPAREN" &&
+      tokens[current + 2].type === "IDENTIFIER" &&
+      tokens[current + 3].type === "RPAREN" &&
+      tokens[current + 4].type === "SEMICOLON"
+    ) {
+      ast.body.push({
+        type: "Play",
+        argument: {
+          type: "Identifier",
+          name: tokens[current + 2].value
+        }
+      });
+
+      current = current + 5;
     }
 
-    function parseTerm() {
-        let token = tokens[i];
-
-        if (token.type === "NUMBER") {
-            i++;
-            return { type: "NumberLiteral", value: token.value };
+     else if (
+      current + 4 < tokens.length &&
+      tokens[current].type === "KEYWORD" &&
+      tokens[current].value === "passPlay" &&
+      tokens[current + 1].type === "LPAREN" &&
+      tokens[current + 2].type === "STRING" &&
+      tokens[current + 3].type === "RPAREN" &&
+      tokens[current + 4].type === "SEMICOLON"
+    ) {
+      ast.body.push({
+        type: "passPlay",
+        argument: {
+          type: "String",
+          name: tokens[current + 2].value
         }
+      });
 
-        if (token.type === "IDENTIFIER") {
-            i++;
-            return { type: "Identifier", name: token.value };
-        }
-
-        throw new Error("Unexpected token: " + token.type);
+      current = current + 5;
     }
 
-    function parseStatement() {
-        let token = tokens[i];
-        
-        //Assignment
-        if (token.type === "IDENTIFIER" && tokens[i + 1]?.type === "EQUALS") {
-            let name = token.value;
-            i += 2; //skip identifier + '=' 
-
-            let value = parseExpression();
-
-            return {
-                type: "Assignment",
-                name,
-                value
-            };
+     else if (
+      current + 4 < tokens.length &&
+      tokens[current].type === "KEYWORD" &&
+      tokens[current].value === "drive" &&
+      tokens[current + 1].type === "LPAREN" &&
+      tokens[current + 2].type === "IDENTIFIER" &&
+      tokens[current + 3].type === "RPAREN" &&
+      tokens[current + 4].type === "SEMICOLON"
+    ) {
+      ast.body.push({
+        type: "drive",
+        argument: {
+          type: "Condition",
+          name: tokens[current + 2].value
         }
-        
-        //Print
-        if (token.type === "PRINT"){
-            i++;
-            let value = parseExpression();
+      });
 
-            return {
-                type: "Print",
-                value
-            };
-        }
-
-        throw new Error("Invalid statement starting with: " + token.type);
+      current = current + 5;
     }
-
-    const body = [];
-
-    const tokens = [
-        
-        
-    ]
-
-    while (i < tokens.length) {
-        body.push(parseStatement());
+         
+    else {
+        throw new Error("Syntax error:" + current);
     }
-
-    return { 
-        type: "Program", 
-        body 
-    };
+  }
+    return ast;
 }
-
-module.exports = { parse };
