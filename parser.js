@@ -70,6 +70,11 @@ function parse(tokens) {
 
     const body = [];
 
+    const tokens = [
+        
+        
+    ]
+
     while (i < tokens.length) {
         body.push(parseStatement());
     }
