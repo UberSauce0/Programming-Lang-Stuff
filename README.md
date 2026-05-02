@@ -110,10 +110,10 @@ ifDown (yards >= 100){
 2. Joseph Kang
 
 ## Instructions
-TBA
+Type code using the grammar and keywords shown above, then run it through the interpreter, lexer, and parser.
 
 ## State of Language
-TBA
+Unfinished
 
 
 
