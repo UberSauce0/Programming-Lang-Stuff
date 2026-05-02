@@ -11,7 +11,7 @@ function parse(tokens) {
             let right = parseTerm();
 
             left = {
-                type:"BinaryExpression",
+                type: "BinaryExpression",
                 operator: operator.type,
                 left,
                 right
